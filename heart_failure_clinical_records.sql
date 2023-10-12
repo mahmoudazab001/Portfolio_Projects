@@ -122,7 +122,7 @@ order by
 --# 35.6% of people with anaemia died 
 --# 29.4% of people without anaemia died.
 
---2 creatinine phosphokinase
+--3 creatinine phosphokinase
 select
 		creatinine_phosphokinase_Status,
 		case
@@ -140,7 +140,7 @@ order by
 --# 34.4% of people with High range died 
 --# 25.9% of people with Normal range died.
 
---3 diabetes
+--4 diabetes
 select
 		case
 			when diabetes = 0 then 'No diabetes'
@@ -161,7 +161,7 @@ order by
 --# 32.0% of people with diabetes died 
 --# 32.1% of people without diabetes died.
 
---4 ejection fraction
+--5 ejection fraction
 select
 		ejection_fraction_Status,
 		case
@@ -180,7 +180,7 @@ order by
 --# 19.2% of people with low level range ejection_fraction died,
 --# 40.1% of people with very low level ejection_fraction died.
 
---5 high blood pressure
+--6 high blood pressure
 select
 		case
 			when high_blood_pressure = 0 then 'Normal blood pressure'
@@ -201,7 +201,7 @@ order by
 --# 37.1% of people with high blood pressure died 
 --# 29.3% of people with normal blood pressure died.
 
---6 platelets
+--7 platelets
 select
 		Platelets_Status,
 		case
@@ -220,7 +220,7 @@ order by
 --# 28.8% of people with normal platelets died,
 --# 40.7% of people with low platelets died
 
---7 serum creatinine
+--8 serum creatinine
 select
 		serum_creatinine_Status,
 		case
@@ -240,7 +240,7 @@ order by
 --# 23.4% of people with normal level serum creatinine died
 --# 11.1% of people with low level serum creatinine died
 
---8 serum sodium
+--9 serum sodium
 select
 		serum_sodium_Status,
 		case
@@ -259,7 +259,7 @@ order by
 --# 50.6% of people with normal level serum sodium died
 --# 24.7% of people with low level serum sodium died
 
---9 sex
+--10 sex
 select
 		case
 			when sex = 0 then 'Female'
@@ -280,7 +280,7 @@ order by
 --# 32.2% of females died
 --# 33.5% of males died
 
---10 smoking
+--11 smoking
 select
 		case
 			when smoking = 0 then 'Non Smoker'
@@ -301,7 +301,7 @@ order by
 --# 32.5% of smoking people died
 --# 31.2% of non smoking people died
 
---11 time
+--12 time
 select
 		month,
 		case
