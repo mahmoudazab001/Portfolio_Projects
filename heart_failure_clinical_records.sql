@@ -20,10 +20,10 @@ add ejection_fraction_Status varchar(255)
 
 update heart_failure_clinical_records..heart_failure_clinical_records
 set ejection_fraction_Status = case
-			when [ejection_fraction_%] > 75 then 'hypertrophic cardiomyopathy'
-			when [ejection_fraction_%] >=55 then 'Normal heart function'
-			when [ejection_fraction_%] >= 40 then 'Below Normal heart function'
-			else 'High chance of heart failure'
+			when [ejection_fraction_%] > 75 then 'high ejection_fraction_%'
+			when [ejection_fraction_%] >=55 then 'Normal ejection_fraction_%'
+			when [ejection_fraction_%] >= 40 then 'low ejection_fraction_%'
+			else 'very low ejection_fraction_%'
 		end
 
 --3 platelets (According to https://www.oneblood.org/media/blog/platelets/what-is-a-normal-platelet-count.stml#:~:text=For%20women%2C%20the%20average%20platelet,are%20always%20in%20high%20demand.)
@@ -176,7 +176,7 @@ group by
 		ejection_fraction_Status,DEATH_EVENT
 order by
 		1
---# 21%   of people with normal range ejection_fraction died,
+--# 21.0%  of people with normal range ejection_fraction died,
 --# 19.2% of people with low level range ejection_fraction died,
 --# 40.1% of people with very low level ejection_fraction died.
 
